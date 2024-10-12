@@ -4,6 +4,16 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+global.fetch = (url, options) =>
+  new Promise((resolve) => {
+    setTimeout(() => {
+      resolve({
+        ok: true,
+        json: () => Promise.resolve({ message: "Login successful! Send Nolan an email at nolanharris.dev@gmail.com" }),
+      });
+    }, 1000); // Simulate a 1-second delay
+  });
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>

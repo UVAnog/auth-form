@@ -1,0 +1,104 @@
+/* Main container for the auth form */
+.auth-form-container {
+  max-width: 25rem; 
+  margin: 2rem auto; 
+  padding: 5rem 10rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  background: white; 
+  backdrop-filter: blur(10px); /* Slight blur effect */
+  text-align: center;
+  align-items: center;
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: black; /* White text for contrast */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Light text shadow */
+}
+
+/* Styling for each input group */
+.input-group {
+  margin-bottom: 1.5rem;
+  width: 100%;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: black;
+  text-align: left; /* Align label to the left */
+}
+
+.input-group input {
+  width: 100%;
+  padding: 0.85rem;
+  border-radius: 8px;
+  border: none; /* Remove default border */
+  font-size: 1rem;
+  background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent */
+  color: black;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.2); /* Add inner shadow for depth */
+  outline: none;
+  transition: background-color 0.3s ease;
+}
+
+/* focus effect */
+.input-group input:focus {
+  background-color: rgba(255, 255, 255, 0.3); 
+}
+
+/* Submit button styling */
+.submit-button {
+  width: 100%;
+  padding: 0.85rem;
+  background-color: #007bff;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3); /* Button shadow */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for the button */
+.submit-button:hover {
+  background-color: #0056b3;
+  box-shadow: 0 6px 15px rgba(0, 86, 179, 0.5); /* More intense shadow on hover */
+}
+
+/* message styling */
+.message {
+  margin-top: 1rem;
+  font-weight: bold;
+  color: white;
+  background-color: rgba(0, 128, 0, 0.7);
+  padding: 0.75rem;
+  border-radius: 8px;
+  text-align: center;
+  width: 100%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  max-width: 20rem;
+}
+
+/* queries for responseiveness */
+@media (max-width: 600px) {
+  .auth-form-container {
+    padding: 4rem;
+    max-width: 95%; /* Stretch the form width on smaller screens */
+    
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .submit-button {
+    font-size: 1rem;
+    padding: 0.7rem;
+  }
+}
